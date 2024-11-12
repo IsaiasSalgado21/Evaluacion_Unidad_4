@@ -51,70 +51,190 @@ include "../../app/config.php";
                 <h5>Edit Customer Details</h5>
               </div>
               <div class="card-body">
-                <form method="POST">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item px-0">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <p class="mb-1 text-muted">Customer Image</p>
-                          <img src="path/to/user-image.jpg" alt="User Image" class="img-fluid rounded" style="max-width: 150px;">
-                        </div>
-                      </div>
-                    </li>
-                    <li class="list-group-item px-0 pt-0">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <label class="mb-1 text-muted" for="name">Full Name</label>
-                          <input type="text" class="form-control" id="name" name="name" value="Jonathan Soto">
-                        </div>
-                        <div class="col-md-6">
-                          <label class="mb-1 text-muted" for="role">Role</label>
-                          <input type="text" class="form-control" id="name" name="role" value="Administrador">
-                        </div>
-                      </div>
-                    </li>
-                    <li class="list-group-item px-0">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <label class="mb-1 text-muted" for="phone_number">Phone Number</label>
-                          <input type="text" class="form-control" id="phone_number" name="phone_number" value="6120000000">
-                        </div>
-                        <div class="col-md-6">
-                          <label class="mb-1 text-muted" for="email">Email</label>
-                          <input type="email" class="form-control" id="email" name="email" value="jsoto@uabcs.mx">
-                        </div>
-                      </div>
-                    </li>
-                    <li class="list-group-item px-0">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <p class="mb-1 text-muted">Created By</p>
-                          <p class="mb-0">Jonathan Soto</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="list-group-item px-0 pb-0">
-                      <label class="mb-1 text-muted" for="password">Password</label>
-                      <input type="password" class="form-control" id="password" name="password" value="password123">
-                    </li>
-                    <li class="list-group-item px-0 pb-0">
-                      <label class="mb-1 text-muted" for="is_suscribed">Is Subscribed</label>
-                      <input type="is_suscribed" class="form-control" id="is_suscribed" name="is_suscribed" value="1">
-
-                    </li>
-                    <li class="list-group-item px-0 pb-0">
-                      <label class="mb-1 text-muted" for="level_id">Level ID</label>
-                      <input type="level_id" class="form-control" id="level_id" name="level_id" value="1">
-                    </li>
-                  </ul>
-                </form>
-              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item px-0 pt-0">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="mb-1 text-muted">Full Name</label>
+                      <p class="mb-0">Jonathan Soto</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item px-0">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="mb-1 text-muted">Email</label>
+                      <p class="mb-0">jsoto@uabcs.mx</p>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="mb-1 text-muted">Password</label>
+                      <p class="mb-0">password123</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item px-0 pb-0">
+                    <label class="mb-1 text-muted">Phone Number</label>
+                    <p class="mb-0">6120000000</p>
+                </li>
+                <li class="list-group-item px-0 pb-0">
+                  <label class="mb-1 text-muted">Is Subscribed</label>
+                  <p class="mb-0">1</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+
+
+        <div class="tab-content" id="Customer-set-tabContent">
+          <div class="tab-pane fade show active" id="user-set-profile" role="tabpanel" aria-labelledby="user-set-profile-tab">
+
+            <!-- Carta para Nivel -->
+            <div class="card my-3">
+              <div class="card-header">
+                <h5>Nivel</h5>
+              </div>
+              <div class="card-body">
+                <p class="mb-1 text-muted">Nivel Actual</p>
+                <p class="mb-0">1</p>
+              </div>
+            </div>
+
+            <!-- Carta para Lista de Órdenes -->
+            <div class="card my-3">
+              <div class="card-header">
+                <h5>Lista de Órdenes</h5>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Orden #001 - Estado: Completado</li>
+                  <li class="list-group-item">Orden #002 - Estado: Pendiente</li>
+                  <li class="list-group-item">Orden #003 - Estado: Cancelado</li>
+                  <!-- Añadir más órdenes según sea necesario -->
+                </ul>
+              </div>
+            </div>
+
+            <!-- Carta para Widgets Totales de Compras -->
+            <div class="card my-3">
+              <div class="card-header">
+                <h5>Widgets Totales de Compras</h5>
+              </div>
+              <div class="row g-3 mb-3">
+                  <div class="col-md-6 col-xxl-3">
+                    <div class="card border mb-0">
+                      <div class="card-body p-3">
+                        <div class="d-flex align-items-center justify-content-between gap-1">
+                          <h6 class="mb-0">Total</h6>
+                          <p class="mb-0 text-muted d-flex align-items-center gap-1">
+                            <svg class="pc-icon text-warning wid-15 hei-15">
+                              <use xlink:href="#custom-arrow-down"></use>
+                            </svg>
+                            20.3%</p
+                          >
+                        </div>
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="d-flex align-items-center gap-1">
+                          <h5 class="mb-0">3</h5>
+                          <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-xxl-3">
+                    <div class="card border mb-0">
+                      <div class="card-body p-3">
+                        <div class="d-flex align-items-center justify-content-between gap-1">
+                          <h6 class="mb-0">Paid</h6>
+                          <p class="mb-0 text-muted d-flex align-items-center gap-1">
+                            <svg class="pc-icon text-danger wid-15 hei-15">
+                              <use xlink:href="#custom-arrow-down"></use>
+                            </svg>
+                            -8.73%</p
+                          >
+                        </div>
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="d-flex align-items-center gap-1">
+                          <h5 class="mb-0">5</h5>
+                          <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-xxl-3">
+                    <div class="card border mb-0">
+                      <div class="card-body p-3">
+                        <div class="d-flex align-items-center justify-content-between gap-1">
+                          <h6 class="mb-0">Pending</h6>
+                          <p class="mb-0 text-muted d-flex align-items-center gap-1">
+                            <svg class="pc-icon text-success wid-15 hei-15">
+                              <use xlink:href="#custom-arrow-up"></use>
+                            </svg>
+                            10.73%</p
+                          >
+                        </div>
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="d-flex align-items-center gap-1">
+                          <h5 class="mb-0">20</h5>
+                          <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-xxl-3">
+                    <div class="card border mb-0">
+                      <div class="card-body p-3">
+                        <div class="d-flex align-items-center justify-content-between gap-1">
+                          <h6 class="mb-0">Overdue</h6>
+                          <p class="mb-0 text-muted d-flex align-items-center gap-1">
+                            <svg class="pc-icon text-primary wid-15 hei-15">
+                              <use xlink:href="#custom-arrow-down"></use>
+                            </svg>
+                            -4.73%</p
+                          >
+                        </div>
+                        <h5 class="mb-2 mt-3">£5678.09</h5>
+                        <div class="d-flex align-items-center gap-1">
+                          <h5 class="mb-0">5</h5>
+                          <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Carta para Direcciones Registradas con CRUD de Direcciones -->
+            <div class="card my-3">
+              <div class="card-header d-flex justify-content-between">
+                <h5>Direcciones Registradas</h5>
+                <button class="btn btn-sm btn-success">Añadir Dirección</button>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <p class="mb-0">Dirección 1: Calle Principal 123, Ciudad, País</p>
+                    <button class="btn btn-sm btn-primary">Editar</button>
+                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                  </li>
+                  <li class="list-group-item">
+                    <p class="mb-0">Dirección 2: Avenida Secundaria 456, Ciudad, País</p>
+                    <button class="btn btn-sm btn-primary">Editar</button>
+                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
       </div>
     </div>
-    <!-- [ Main Content ] end -->
+  </div>
+  <!-- [ Main Content ] end -->
 
     
     <?php include "../layouts/footer.php" ?> 

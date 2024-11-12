@@ -53,7 +53,7 @@ include "../../app/config.php";
               </div>
               <div class="card-body">
                 <ul class="list-group list-group-flush">
-                <li class="list-group-item px-0">
+                  <li class="list-group-item px-0">
                     <div class="row">
                       <div class="col-md-12">
                         <p class="mb-1 text-muted">User Image</p>
@@ -76,30 +76,30 @@ include "../../app/config.php";
                   <li class="list-group-item px-0">
                     <div class="row">
                       <div class="col-md-6">
-                        <p class="mb-1 text-muted">Phone Number</p>
-                        <p class="mb-0">6123480678</p>
-                      </div>
-                      <div class="col-md-6">
                         <p class="mb-1 text-muted">Email</p>
                         <p class="mb-0">jsoto@uabcs.mx</p>
+                      </div>
+                      <div class="col-md-6">
+                        <p class="mb-1 text-muted">Password</p>
+                        <p class="mb-0">password123</p>
                       </div>
                     </div>
                   </li>
                   <li class="list-group-item px-0">
                     <div class="row">
                       <div class="col-md-6">
-                        <p class="mb-1 text-muted">Created By</p>
-                        <p class="mb-0">Jonathan Soto</p>
+                        <p class="mb-1 text-muted">Phone Number</p>
+                        <p class="mb-0">6123480678</p>
                       </div>
                       <div class="col-md-6">
-                        <p class="mb-1 text-muted">ID</p>
-                        <p class="mb-0">1</p>
+                        <p class="mb-1 text-muted">Created By</p>
+                        <p class="mb-0">Jonathan Soto</p>
                       </div>
                     </div>
                   </li>
                   <li class="list-group-item px-0 pb-0">
-                    <p class="mb-1 text-muted">Password</p>
-                    <p class="mb-0">password123</p>
+                    <p class="mb-1 text-muted">ID</p>
+                    <p class="mb-0">1</p>
                   </li>
                 </ul>
               </div>
