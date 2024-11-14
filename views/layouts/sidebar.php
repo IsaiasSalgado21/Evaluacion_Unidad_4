@@ -37,7 +37,7 @@
           ></a>
           <ul class="pc-submenu">
             <li class="pc-item"><a class="pc-link" href="account-profile.html">Account Profile</a></li>
-            <li class="pc-item"><a class="pc-link" href="user-list.html">User List</a></li>
+            <li class="pc-item"><a class="pc-link" href="/views/users/user-list.php">User List</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">

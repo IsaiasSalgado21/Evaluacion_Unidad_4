@@ -33,11 +33,12 @@
           <div class="card my-5 mx-3">
             <div class="card-body">
               <h4 class="f-w-500 mb-1">Login with your email</h4>
+              <form method="POST" action="app/AuthController.php">
               <div class="mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email Address" />
+                <input type="email" class="form-control" id="floatingInput" placeholder="Email Address" name="email" />
               </div>
               <div class="mb-3">
-                <input type="password" class="form-control" id="floatingInput1" placeholder="Password" />
+                <input type="password" class="form-control" id="floatingInput1" placeholder="Password"  name="password"/>
               </div>
               <div class="d-flex mt-1 justify-content-between align-items-center">
                 <div class="form-check">
@@ -46,8 +47,10 @@
                 </div>
               </div>
               <div class="d-grid mt-4">
-                <button type="button" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary">Login</button>
               </div>
+              <input type="hidden" name="action" value="login">
+              </form>
             </div>
           </div>
         </div>
