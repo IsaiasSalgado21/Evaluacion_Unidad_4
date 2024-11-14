@@ -66,7 +66,6 @@ $customers=$customerController->get();
                     <tr>
                       <td>
                         <div class="d-inline-block align-middle">
-                          <img src="../assets/images/user/avatar-1.jpg" alt="user image" class="img-radius align-top m-r-15" style="width: 40px" />
                           <div class="d-inline-block">
                             <h6 class="m-b-0">Quinn Flynn</h6>
                           </div>
@@ -85,7 +84,6 @@ $customers=$customerController->get();
                     <tr>
                       <td>
                         <div class="d-inline-block align-middle">
-                          <img src="../assets/images/user/avatar-2.jpg" alt="user image" class="img-radius align-top m-r-15" style="width: 40px" />
                           <div class="d-inline-block">
                             <h6 class="m-b-0">Garrett Winters</h6>
                           </div>

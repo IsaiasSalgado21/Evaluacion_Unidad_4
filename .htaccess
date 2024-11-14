@@ -10,6 +10,10 @@ RewriteRule ^user-list/?$ views/users/user-list.php
 RewriteRule ^user-details/?$ views/users/user-details.php 
 RewriteRule ^customers-list/?$ views/customers/customers-list.php 
 RewriteRule ^customer-details/?$ views/customers/customer-details.php 
+RewriteRule ^categories/?$ views/catalogues/categories.php 
+RewriteRule ^brands/?$ views/catalogues/brands.php 
+RewriteRule ^tags/?$ views/catalogues/tags.php 
+
 
 RewriteRule ^products/?$ views/products/index.php 
 RewriteRule ^products/create/?$ views/products/create.php 

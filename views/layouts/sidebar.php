@@ -57,14 +57,23 @@
             <span class="pc-micon">
               <i class="ph-duotone ph-shopping-cart"></i>
             </span>
-            <span class="pc-mtext">E-commerce</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
+            <span class="pc-mtext">Product</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="ecom_product.html">Product</a></li>
-            <li class="pc-item"><a class="pc-link" href="ecom_product-details.html">Product details</a></li>
             <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Product List</a></li>
-            <li class="pc-item"><a class="pc-link" href="ecom_product-add.html">Add New Product</a></li>
-            <li class="pc-item"><a class="pc-link" href="ecom_checkout.html">Checkout</a></li>
+          </ul>
+        </li>
+        <li class="pc-item pc-hasmenu">
+          <a href="#!" class="pc-link">
+            <span class="pc-micon">
+              <i class="ph-duotone ph-newspaper"></i>
+            </span>
+            <span class="pc-mtext">Catalogues</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
+          ></a>
+          <ul class="pc-submenu">
+            <li class="pc-item"><a class="pc-link" href="invoice-list.html">Categories</a></li>
+            <li class="pc-item"><a class="pc-link" href="invoice-create.html">Brands</a></li>
+            <li class="pc-item"><a class="pc-link" href="invoice-view.html">Tags</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -85,19 +94,6 @@
               </ul>
             </li>
             <li class="pc-item"><a class="pc-link" href="../admins/helpdesk-customer.html">Customer</a></li>
-          </ul>
-        </li>
-        <li class="pc-item pc-hasmenu">
-          <a href="#!" class="pc-link">
-            <span class="pc-micon">
-              <i class="ph-duotone ph-newspaper"></i>
-            </span>
-            <span class="pc-mtext">Invoice 1</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
-          ></a>
-          <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="invoice-list.html">Invoice List</a></li>
-            <li class="pc-item"><a class="pc-link" href="invoice-create.html">Create</a></li>
-            <li class="pc-item"><a class="pc-link" href="invoice-view.html">Preview</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
