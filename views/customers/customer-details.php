@@ -1,5 +1,5 @@
 <?php 
-include "../../app/config.php";
+  include "../../app/config.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -120,89 +120,90 @@ include "../../app/config.php";
               <div class="card-header">
                 <h5>Widgets Totales de Compras</h5>
               </div>
-              <div class="row g-3 mb-3">
-                  <div class="col-md-6 col-xxl-3">
-                    <div class="card border mb-0">
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center justify-content-between gap-1">
-                          <h6 class="mb-0">Total</h6>
-                          <p class="mb-0 text-muted d-flex align-items-center gap-1">
-                            <svg class="pc-icon text-warning wid-15 hei-15">
-                              <use xlink:href="#custom-arrow-down"></use>
-                            </svg>
-                            20.3%</p
-                          >
-                        </div>
-                        <h5 class="mb-2 mt-3">£5678.09</h5>
-                        <div class="d-flex align-items-center gap-1">
-                          <h5 class="mb-0">3</h5>
-                          <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
-                        </div>
-                      </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6 col-xxl-3">
+                <div class="card border mb-0">
+                  <div class="card-body p-3">
+                    <div class="d-flex align-items-center justify-content-between gap-1">
+                      <h6 class="mb-0">Total</h6>
+                      <p class="mb-0 text-muted d-flex align-items-center gap-1">
+                        <svg class="pc-icon text-warning wid-15 hei-15">
+                          <use xlink:href="#custom-arrow-down"></use>
+                        </svg>
+                        20.3%</p
+                      >
                     </div>
-                  </div>
-                  <div class="col-md-6 col-xxl-3">
-                    <div class="card border mb-0">
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center justify-content-between gap-1">
-                          <h6 class="mb-0">Paid</h6>
-                          <p class="mb-0 text-muted d-flex align-items-center gap-1">
-                            <svg class="pc-icon text-danger wid-15 hei-15">
-                              <use xlink:href="#custom-arrow-down"></use>
-                            </svg>
-                            -8.73%</p
-                          >
-                        </div>
-                        <h5 class="mb-2 mt-3">£5678.09</h5>
-                        <div class="d-flex align-items-center gap-1">
-                          <h5 class="mb-0">5</h5>
-                          <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-xxl-3">
-                    <div class="card border mb-0">
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center justify-content-between gap-1">
-                          <h6 class="mb-0">Pending</h6>
-                          <p class="mb-0 text-muted d-flex align-items-center gap-1">
-                            <svg class="pc-icon text-success wid-15 hei-15">
-                              <use xlink:href="#custom-arrow-up"></use>
-                            </svg>
-                            10.73%</p
-                          >
-                        </div>
-                        <h5 class="mb-2 mt-3">£5678.09</h5>
-                        <div class="d-flex align-items-center gap-1">
-                          <h5 class="mb-0">20</h5>
-                          <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-xxl-3">
-                    <div class="card border mb-0">
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center justify-content-between gap-1">
-                          <h6 class="mb-0">Overdue</h6>
-                          <p class="mb-0 text-muted d-flex align-items-center gap-1">
-                            <svg class="pc-icon text-primary wid-15 hei-15">
-                              <use xlink:href="#custom-arrow-down"></use>
-                            </svg>
-                            -4.73%</p
-                          >
-                        </div>
-                        <h5 class="mb-2 mt-3">£5678.09</h5>
-                        <div class="d-flex align-items-center gap-1">
-                          <h5 class="mb-0">5</h5>
-                          <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
-                        </div>
-                      </div>
+                    <h5 class="mb-2 mt-3">£5678.09</h5>
+                    <div class="d-flex align-items-center gap-1">
+                      <h5 class="mb-0">3</h5>
+                      <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="col-md-6 col-xxl-3">
+                <div class="card border mb-0">
+                  <div class="card-body p-3">
+                    <div class="d-flex align-items-center justify-content-between gap-1">
+                      <h6 class="mb-0">Paid</h6>
+                      <p class="mb-0 text-muted d-flex align-items-center gap-1">
+                        <svg class="pc-icon text-danger wid-15 hei-15">
+                          <use xlink:href="#custom-arrow-down"></use>
+                        </svg>
+                        -8.73%</p
+                      >
+                    </div>
+                    <h5 class="mb-2 mt-3">£5678.09</h5>
+                    <div class="d-flex align-items-center gap-1">
+                      <h5 class="mb-0">5</h5>
+                      <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xxl-3">
+                <div class="card border mb-0">
+                  <div class="card-body p-3">
+                    <div class="d-flex align-items-center justify-content-between gap-1">
+                      <h6 class="mb-0">Pending</h6>
+                      <p class="mb-0 text-muted d-flex align-items-center gap-1">
+                        <svg class="pc-icon text-success wid-15 hei-15">
+                          <use xlink:href="#custom-arrow-up"></use>
+                        </svg>
+                        10.73%</p
+                      >
+                    </div>
+                    <h5 class="mb-2 mt-3">£5678.09</h5>
+                    <div class="d-flex align-items-center gap-1">
+                      <h5 class="mb-0">20</h5>
+                      <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xxl-3">
+                <div class="card border mb-0">
+                  <div class="card-body p-3">
+                    <div class="d-flex align-items-center justify-content-between gap-1">
+                      <h6 class="mb-0">Overdue</h6>
+                      <p class="mb-0 text-muted d-flex align-items-center gap-1">
+                        <svg class="pc-icon text-primary wid-15 hei-15">
+                          <use xlink:href="#custom-arrow-down"></use>
+                        </svg>
+                        -4.73%</p
+                      >
+                    </div>
+                    <h5 class="mb-2 mt-3">£5678.09</h5>
+                    <div class="d-flex align-items-center gap-1">
+                      <h5 class="mb-0">5</h5>
+                      <p class="mb-0 text-muted d-flex align-items-center gap-2">invoices</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            
 
             <!-- Carta para Direcciones Registradas con CRUD de Direcciones -->
             <div class="card my-3">

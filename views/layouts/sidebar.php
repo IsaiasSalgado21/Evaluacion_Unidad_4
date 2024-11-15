@@ -60,7 +60,8 @@
             <span class="pc-mtext">Product</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Product List</a></li>
+            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Products List</a></li>
+            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Product Details</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -78,35 +79,13 @@
         </li>
         <li class="pc-item pc-hasmenu">
           <a href="#!" class="pc-link"
-            ><span class="pc-micon"><i class="ph-duotone ph-lifebuoy"></i></span><span class="pc-mtext">Helpdesk</span
+            ><span class="pc-micon"><i class="ph-duotone ph-newspaper"></i></span><span class="pc-mtext">Coupon</span
             ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="../admins/helpdesk-dashboard.html">Dashboard</a></li>
-            <li class="pc-item pc-hasmenu">
-              <a class="pc-link" href="#!"
-                >Ticket<span class="pc-arrow"><i data-feather="chevron-right"></i></span
-              ></a>
-              <ul class="pc-submenu">
-                <li class="pc-item"><a class="pc-link" href="../admins/helpdesk-create-ticket.html">Create</a></li>
-                <li class="pc-item"><a class="pc-link" href="../admins/helpdesk-ticket.html">List</a></li>
-                <li class="pc-item"><a class="pc-link" href="../admins/helpdesk-ticket-details.html">Details</a></li>
-              </ul>
-            </li>
-            <li class="pc-item"><a class="pc-link" href="../admins/helpdesk-customer.html">Customer</a></li>
-          </ul>
-        </li>
-        <li class="pc-item pc-hasmenu">
-          <a href="#!" class="pc-link"
-            ><span class="pc-micon"><i class="ph-duotone ph-newspaper"></i></span><span class="pc-mtext">Invoice 2</span
-            ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
-          ></a>
-          <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="../admins/invoice-dashboard.html">Dashboard</a></li>
-            <li class="pc-item"><a class="pc-link" href="../admins/invoice-create.html">Create</a></li>
-            <li class="pc-item"><a class="pc-link" href="../admins/invoice-view.html">Details</a></li>
-            <li class="pc-item"><a class="pc-link" href="../admins/invoice-list.html">List</a></li>
-            <li class="pc-item"><a class="pc-link" href="../admins/invoice-edit.html">Edit</a></li>
+            <li class="pc-item"><a class="pc-link" href="../admins/invoice-dashboard.html">Coupons List</a></li>
+            <li class="pc-item"><a class="pc-link" href="../admins/invoice-create.html">Coupon Details</a></li>
+
           </ul>
         </li>
       </ul>
