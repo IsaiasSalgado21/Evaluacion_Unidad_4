@@ -39,6 +39,14 @@
       </div>
 
       <div class="row">
+        <ul class="list-inline me-auto my-1">
+          <li class="list-inline-item">
+            <form class="form-search">
+              <i class="ph-duotone ph-magnifying-glass icon-search"></i>
+              <input type="search" class="form-control" placeholder="Search Products">
+            </form>
+          </li>
+        </ul>
         <div class="col-md-12 text-end mb-3">
           <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addOrderModal">Add Order</button>
         </div>
