@@ -50,6 +50,7 @@
           </a>
           <ul class="pc-submenu">
             <li class="pc-item"><a class="pc-link" href="../admins/membership-list.html">Customers List</a></li>
+            <li class="pc-item"><a class="pc-link" href="../admins/membership-list.html">Customers Details</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -57,7 +58,7 @@
             <span class="pc-micon">
               <i class="ph-duotone ph-shopping-cart"></i>
             </span>
-            <span class="pc-mtext">Product</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
+            <span class="pc-mtext">Products</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
             <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Products List</a></li>
@@ -79,13 +80,24 @@
         </li>
         <li class="pc-item pc-hasmenu">
           <a href="#!" class="pc-link"
-            ><span class="pc-micon"><i class="ph-duotone ph-newspaper"></i></span><span class="pc-mtext">Coupon</span
+            ><span class="pc-micon"><i class="ph-duotone ph-newspaper"></i></span><span class="pc-mtext">Coupons</span
             ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
             <li class="pc-item"><a class="pc-link" href="../admins/invoice-dashboard.html">Coupons List</a></li>
             <li class="pc-item"><a class="pc-link" href="../admins/invoice-create.html">Coupon Details</a></li>
-
+          </ul>
+        </li>
+        <li class="pc-item pc-hasmenu">
+          <a href="#!" class="pc-link">
+            <span class="pc-micon">
+              <i class="ph-duotone ph-shopping-cart"></i>
+            </span>
+            <span class="pc-mtext">Orders</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
+          ></a>
+          <ul class="pc-submenu">
+            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Orders List</a></li>
+            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Order Details</a></li>
           </ul>
         </li>
       </ul>

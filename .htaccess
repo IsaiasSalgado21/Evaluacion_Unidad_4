@@ -22,6 +22,8 @@ RewriteRule ^coupon-details/?$ views/coupon/coupon-details.php
 RewriteRule ^products-list/?$ views/products/products-list.php 
 RewriteRule ^product-details/?$ views/products/product-details.php 
 
+RewriteRule ^orders-list/?$ views/order/orders-list.php 
+RewriteRule ^order-details/?$ views/order/order-details.php 
 
 
 
