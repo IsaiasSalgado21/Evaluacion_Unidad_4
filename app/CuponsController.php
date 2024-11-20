@@ -190,4 +190,28 @@ class CuponsController
         curl_close($curl);
         echo $response;
     }
+
+
+
+
+
+public function getWidgetTotalDiscounts($orders)
+{
+    $widgetDiscounts = [];
+    foreach ($orders as $order) {
+        foreach ($order['products'] as $product) {
+            $productId = $product['id'];
+            
+            $productDiscount = $product['price'] * ($order['coupon']['percentage_discount'] / 100);
+            if (!isset($widgetDiscounts[$productId])) {
+                $widgetDiscounts[$productId] = 0;
+            }
+            $widgetDiscounts[$productId] += $productDiscount;
+        }
+    }
+    return $widgetDiscounts;
+    
+}
+
+// Ejemplo de uso:
 }
