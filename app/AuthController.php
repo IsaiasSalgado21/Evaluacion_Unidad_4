@@ -53,9 +53,9 @@ class AuthController
 
 
             $_SESSION['user_data'] = $response->data;
-            header("Location: ../views/home.php");
+            header("Location: ../index.php ");
         } else {
-            header("Location: index.php");
+            header("Location: ../views/home.php");
         }
     }
 
