@@ -34,22 +34,22 @@
             <div class="card-body">
               <h4 class="f-w-500 mb-1">Login with your email</h4>
               <form method="POST" action="app/AuthController.php">
-              <div class="mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email Address" name="email" />
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control" id="floatingInput1" placeholder="Password"  name="password"/>
-              </div>
-              <div class="d-flex mt-1 justify-content-between align-items-center">
-                <div class="form-check">
-                  <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="" />
-                  <label class="form-check-label text-muted" for="customCheckc1">Remember me?</label>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="Email Address" name="email" />
                 </div>
-              </div>
-              <div class="d-grid mt-4">
-                <button type="submit" class="btn btn-primary">Login</button>
-              </div>
-              <input type="hidden" name="action" value="login">
+                <div class="mb-3">
+                  <input type="password" class="form-control" id="floatingInput1" placeholder="Password"  name="password"/>
+                </div>
+                <div class="d-flex mt-1 justify-content-between align-items-center">
+                  <div class="form-check">
+                    <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="" />
+                    <label class="form-check-label text-muted" for="customCheckc1">Remember me?</label>
+                  </div>
+                </div>
+                <div class="d-grid mt-4">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <input type="hidden" name="action" value="login">
               </form>
             </div>
           </div>
