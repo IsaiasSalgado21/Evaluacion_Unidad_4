@@ -3,8 +3,6 @@
         session_start();
     }
 
-
-
     if (isset($_POST['action'])) {
         switch($_POST['action']){
     

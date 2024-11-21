@@ -1,31 +1,29 @@
 Options +FollowSymLinks -MultiViews -Indexes
-RewriteEngine on 
+RewriteEngine On
 
 #páginas
-RewriteRule ^login/?$ index.php 
-RewriteRule ^home/?$ views/home.php 
-RewriteRule ^profile/?$ views/account-profile.php
+RewriteRule ^login/?$ index.php [L]
+RewriteRule ^home/?$ views/home.php [L]
+RewriteRule ^profile/?$ views/account-profile.php [L]
 
-RewriteRule ^user-list/?$ views/users/user-list.php 
-RewriteRule ^user-details/?$ views/users/user-details.php 
+RewriteRule ^user-list/?$ views/users/user-list.php [L]
+RewriteRule ^user-details/?$ views/users/user-details.php [L]
 
-RewriteRule ^customers-list/?$ views/customers/customers-list.php 
-RewriteRule ^customer-details/?$ views/customers/customer-details.php 
+RewriteRule ^customers-list/?$ views/customers/customers-list.php [L]
+RewriteRule ^customer-details/?$ views/customers/customer-details.php [L]
 
-RewriteRule ^categories/?$ views/catalogues/categories.php 
-RewriteRule ^brands/?$ views/catalogues/brands.php 
-RewriteRule ^tags/?$ views/catalogues/tags.php 
+RewriteRule ^products-list/?$ views/products/products-list.php [L]
+RewriteRule ^product-details/?$ views/products/product-details.php [L]
 
-RewriteRule ^coupons-list/?$ views/coupon/coupons-list.php 
-RewriteRule ^coupon-details/?$ views/coupon/coupon-details.php 
+RewriteRule ^categories/?$ views/catalogues/categories.php [L]
+RewriteRule ^brands/?$ views/catalogues/brands.php [L]
+RewriteRule ^tags/?$ views/catalogues/tags.php [L]
 
-RewriteRule ^products-list/?$ views/products/products-list.php 
-RewriteRule ^product-details/?$ views/products/product-details.php 
+RewriteRule ^coupons-list/?$ views/coupon/coupons-list.php [L]
+RewriteRule ^coupon-details/?$ views/coupon/coupon-details.php [L]
 
-RewriteRule ^orders-list/?$ views/order/orders-list.php 
-RewriteRule ^order-details/?$ views/order/order-details.php 
-
-
+RewriteRule ^orders-list/?$ views/order/orders-list.php [L]
+RewriteRule ^order-details/?$ views/order/order-details.php [L]
 
 #RewriteCond %{REQUEST_URI} ^\/404/$
 #RewriteRule ^(.*)$ /views/errors/404.php [L]

@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../app/config.php';
 if (isset($_POST['action'])) {
     switch ($_POST['action']) {
         case 'login':
@@ -50,12 +51,12 @@ class AuthController
         $response = json_decode($response);
 
         if (isset($response->data)  && is_object($response->data)) {
-
-
             $_SESSION['user_data'] = $response->data;
-            header("Location: ../index.php ");
+            header("Location: " . BASE_PATH . "home/");
+            exit;
         } else {
-            header("Location: ../views/home.php");
+            header("Location: " . BASE_PATH . "login");
+            exit;
         }
     }
 

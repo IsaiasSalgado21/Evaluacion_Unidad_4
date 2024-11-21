@@ -36,8 +36,8 @@
             <span class="pc-mtext">Users</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="account-profile.html">Account Profile</a></li>
-            <li class="pc-item"><a class="pc-link" href="/views/users/user-list.php">User List</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>profile/">Account Profile</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>user-list/">User List</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -49,8 +49,8 @@
             <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
           </a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="../admins/membership-list.html">Customers List</a></li>
-            <li class="pc-item"><a class="pc-link" href="../admins/membership-list.html">Customers Details</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>customers-list/">Customers List</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>customer-details/">Customers Details</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -61,8 +61,8 @@
             <span class="pc-mtext">Products</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Products List</a></li>
-            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Product Details</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>products-list/">Products List</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>product-details/">Product Details</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -73,9 +73,9 @@
             <span class="pc-mtext">Catalogues</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="invoice-list.html">Categories</a></li>
-            <li class="pc-item"><a class="pc-link" href="invoice-create.html">Brands</a></li>
-            <li class="pc-item"><a class="pc-link" href="invoice-view.html">Tags</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>categories/">Categories</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>brands/">Brands</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>tags/">Tags</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -84,8 +84,8 @@
             ><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="../admins/invoice-dashboard.html">Coupons List</a></li>
-            <li class="pc-item"><a class="pc-link" href="../admins/invoice-create.html">Coupon Details</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>coupons-list/">Coupons List</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>coupon-details/">Coupon Details</a></li>
           </ul>
         </li>
         <li class="pc-item pc-hasmenu">
@@ -96,8 +96,8 @@
             <span class="pc-mtext">Orders</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span
           ></a>
           <ul class="pc-submenu">
-            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Orders List</a></li>
-            <li class="pc-item"><a class="pc-link" href="ecom_product-list.html">Order Details</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>orders-list/">Orders List</a></li>
+            <li class="pc-item"><a class="pc-link" href="<?= BASE_PATH ?>order-details/">Order Details</a></li>
           </ul>
         </li>
       </ul>
