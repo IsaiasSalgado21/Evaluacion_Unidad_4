@@ -1,13 +1,14 @@
 <?php 
-include "../../app/config.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/Evaluacion_Unidad_4/app/config.php";
 ?>
 <!doctype html>
 <html lang="en">
   <!-- [Head] start -->
   <head>
-    <?php include "../layouts/head.php" ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "/Evaluacion_Unidad_4/views/layouts/head.php"; ?>
   </head>
   <!-- [Head] end -->
+  
   <!-- [Body] Start -->
   <body data-pc-preset="preset-1" data-pc-sidebar-theme="light" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme="light">
     <!-- [ Pre-loader ] start -->
@@ -17,8 +18,9 @@ include "../../app/config.php";
       </div>
     </div>
     <!-- [ Pre-loader ] End --> 
-    <?php include "../layouts/sidebar.php" ?> 
-    <?php include "../layouts/navbar.php" ?>
+    
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "/Evaluacion_Unidad_4/views/layouts/sidebar.php"; ?> 
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "/Evaluacion_Unidad_4/views/layouts/navbar.php"; ?>
 
     <!-- [ Main Content ] start -->
     <div class="pc-container">
@@ -57,7 +59,7 @@ include "../../app/config.php";
                     <div class="row">
                       <div class="col-md-12">
                         <p class="mb-1 text-muted">User Image</p>
-                        <img src="path/to/user-image.jpg" alt="User Image" class="img-fluid rounded" style="max-width: 150px;">
+                        <img src="<?= BASE_PATH ?>path/to/user-image.jpg" alt="User Image" class="img-fluid rounded" style="max-width: 150px;">
                       </div>
                     </div>
                   </li>
@@ -107,24 +109,22 @@ include "../../app/config.php";
           </div>
         </div>
         <!-- [ User Details Form ] end -->
-
       </div>
     </div>
     <!-- [ Main Content ] end -->
 
-    
-    <?php include "../layouts/footer.php" ?> 
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "/Evaluacion_Unidad_4/views/layouts/footer.php"; ?> 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?= BASE_PATH ?>assets/js/plugins/apexcharts.min.js"></script>
     <script src="<?= BASE_PATH ?>assets/js/plugins/jsvectormap.min.js"></script>
     <script src="<?= BASE_PATH ?>assets/js/plugins/world.js"></script>
     <script src="<?= BASE_PATH ?>assets/js/plugins/world-merc.js"></script>
-    <script src="<?= BASE_PATH ?> assets/js/pages/dashboard-default.js"></script>
+    <script src="<?= BASE_PATH ?>assets/js/pages/dashboard-default.js"></script>
 
-    <?php include "../layouts/scripts.php" ?> 
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "/Evaluacion_Unidad_4/views/layouts/scripts.php"; ?> 
 
-    <?php include "../layouts/modals.php" ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "/Evaluacion_Unidad_4/views/layouts/modals.php"; ?>
   </body>
   <!-- [Body] end -->
 </html>
