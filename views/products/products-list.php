@@ -44,7 +44,6 @@ $productos = $productsController->get();
         </div>
       </div>
 
-
       <div class="d-sm-flex align-items-center mb-4">
         <ul class="list-inline me-auto my-1">
           <li class="list-inline-item">
@@ -56,33 +55,32 @@ $productos = $productsController->get();
         </ul>
         <ul class="list-inline ms-auto my-1">
           <li class="list-inline-item">
-            <!-- Botón para añadir un nuevo producto -->
             <a href="add-product.php" class="btn btn-success">Añadir Producto</a>
           </li>
         </ul>
       </div>
 
       <div class="row">
-        <div class="col-sm-12">
-          <div class="ecom-wrapper">
-            <div class="ecom-content">
-              <div class="row">
-                <div class="">
-                  <div class="card product-card h-100">
-                    <img src="path/to/your-image.jpg" class="card-img-top" alt="Product Image">
-                    <div class="card-body">
-                      <h5 class="card-title">Nombre del Producto</h5>
-                      <p class="card-text">Descripción breve del producto.</p>
-                      <a href="#" class="btn btn-primary">Ver detalles</a>
-                      <a href="#" class="btn btn-warning">Editar</a>
-                      <button type="button" class="btn btn-danger m-2">Eliminar</button>
-                    </div>
-                  </div>
+        <?php if (!empty($productos)): ?>
+          <?php foreach ($productos as $producto): ?>
+            <div class="col-md-4 col-sm-6">
+              <div class="card product-card h-100">
+                <img src="<?= htmlspecialchars($producto->cover ?? 'path/to/default-image.jpg') ?>" class="card-img-top" alt="<?= htmlspecialchars($producto->name ?? 'Product Image') ?>">
+                <div class="card-body">
+                  <h5 class="card-title"><?= htmlspecialchars($producto->name ?? 'Nombre del Producto') ?></h5>
+                  <p class="card-text"><?= htmlspecialchars($producto->description ?? 'Descripción breve del producto') ?></p>
+                  <a href="product-details.php?id=<?= $producto->id ?>" class="btn btn-primary">Ver detalles</a>
+                  <a href="edit-product.php?id=<?= $producto->id ?>" class="btn btn-warning">Editar</a>
+                  <button type="button" class="btn btn-danger" onclick="deleteProduct(<?= $producto->id ?>)">Eliminar</button>
                 </div>
               </div>
             </div>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <div class="col-12">
+            <p class="text-center">No hay productos disponibles.</p>
           </div>
-        </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
@@ -90,6 +88,15 @@ $productos = $productsController->get();
   <?php include "../layouts/footer.php" ?>
   <?php include "../layouts/scripts.php" ?>
   <?php include "../layouts/modals.php" ?>
+
+  <script>
+    function deleteProduct(productId) {
+      if (confirm('¿Estás seguro de que deseas eliminar este producto?')) {
+        // Lógica para eliminar el producto
+        window.location.href = `delete-product.php?id=${productId}`;
+      }
+    }
+  </script>
 </body>
 
 </html>

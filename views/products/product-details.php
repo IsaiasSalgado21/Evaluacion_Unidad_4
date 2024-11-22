@@ -44,54 +44,50 @@
         <!-- [ breadcrumb ] end -->
 
         <div class="card">
-          <div class="card-body">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Imagen del producto -->
+        <img src="<?= htmlspecialchars($product['image'] ?? 'path/to/default-image.jpg') ?>" 
+             alt="<?= htmlspecialchars($product['name'] ?? 'Product Image') ?>" 
+             class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item px-0 pt-0">
             <div class="row">
-              <div class="col-md-4">
-                <img src="/Users/jonathansoto/Downloads/128703.png" alt="Product Image" class="img-fluid">
-              </div>
-              <div class="col-md-8">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item px-0 pt-0">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="mb-1 text-muted">Name</label>
-                        <p class="mb-0">playear azul</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item px-0">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="mb-1 text-muted">Slug</label>
-                        <p class="mb-0">playera-azul-21-forever-312-7</p>
-                      </div>
-                      <div class="col-md-6">
-                        <label class="mb-1 text-muted">Description</label>
-                        <p class="mb-0">hermosa playera de color azul de la marca 21 forever</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="list-group-item px-0 pb-0">
-                    <label class="mb-1 text-muted">Features</label>
-                    <p class="mb-0">La lavadora cuenta con capacidad de lavado de 18 kg, diseño exterior de color gris, su funcionamiento integra tecnología air bubble 4d, sistema de lavado por pulsador, 5 ciclos de lavado mas ciclo ariel, tina de acero inoxidable, 9 niveles de agua y 3 niveles de temperatura. Ofrece llenado con cascada de agua waterrfall, timer para inicio retardado y manija de apertura ez soft.</p>
-                  </li>
-                  <li class="list-group-item px-0 pb-0">
-                    <label class="mb-1 text-muted">Brand ID</label>
-                    <p class="mb-0">1</p>
-                  </li>
-                  <li class="list-group-item px-0 pb-0">
-                    <label class="mb-1 text-muted">Categories</label>
-                    <p class="mb-0">3, 4</p>
-                  </li>
-                  <li class="list-group-item px-0 pb-0">
-                    <label class="mb-1 text-muted">Tags</label>
-                    <p class="mb-0">3, 4</p>
-                  </li>
-                </ul>
+              <div class="col-md-6">
+                <label class="mb-1 text-muted">Name</label>
+                <p class="mb-0"><?= htmlspecialchars($product['name']) ?></p>
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+          <li class="list-group-item px-0">
+            <div class="row">
+              <div class="col-md-6">
+                <label class="mb-1 text-muted">Slug</label>
+                <p class="mb-0"><?= htmlspecialchars($product['slug']) ?></p>
+              </div>
+              <div class="col-md-6">
+                <label class="mb-1 text-muted">Description</label>
+                <p class="mb-0"><?= htmlspecialchars($product['description']) ?></p>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item px-0 pb-0">
+            <label class="mb-1 text-muted">Features</label>
+            <p class="mb-0"><?= htmlspecialchars($product['features']) ?></p>
+          </li>
+          <li class="list-group-item px-0 pb-0">
+            <label class="mb-1 text-muted">Brand ID</label>
+            <p class="mb-0"><?= htmlspecialchars($product['brand_id']) ?></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         <!-- Lista de Presentaciones -->
         <div class="card my-3">

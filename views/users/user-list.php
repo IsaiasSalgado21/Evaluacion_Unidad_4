@@ -1,8 +1,9 @@
 <?php
-include "../../app/config.php";
-include_once "../../app/UserController.php";
-$UserController = new UserController();
-$Users = $UserController->get();
+  include "../../app/config.php";
+  include_once "../../app/UserController.php";
+
+  $UserController = new UserController();
+  $Users = $UserController->get();
 ?>
 <!doctype html>
 <html lang="en">
@@ -73,55 +74,47 @@ $Users = $UserController->get();
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-inline-block align-middle">
-                          <img
-                            src="../assets/images/user/avatar-1.jpg"
-                            alt="user image"
-                            class="img-radius align-top m-r-15"
-                            style="width: 40px" />
-                          <div class="d-inline-block">
-                            <h6 class="m-b-0">Quinn Flynn</h6>
-                            <p class="m-b-0 text-primary">Android developer</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>Support Lead</td>
-                      <td>quinn.flynn@example.com</td>
-                      <td>
-                        <!-- Action buttons -->
-                        <div class="btn-group">
-                          <button class="btn btn-info">View Details</button>
-                          <button class="btn btn-success">Edit</button>
-                          <button class="btn btn-danger">delete</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-inline-block align-middle">
-                          <img
-                            src="../assets/images/user/avatar-2.jpg"
-                            alt="user image"
-                            class="img-radius align-top m-r-15"
-                            style="width: 40px" />
-                          <div class="d-inline-block">
-                            <h6 class="m-b-0">Garrett Winters</h6>
-                            <p class="m-b-0 text-primary">Android developer</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>Accountant</td>
-                      <td>garrett.winters@example.com</td>
-                      <td>
-                        <div class="btn-group">
-                          <button class="btn btn-info">View Details</button>
-                          <button class="btn btn-success">Edit</button>
-                          <button class="btn btn-danger">delete</button>
-                        </div>
-                      </td>
-                    </tr>
+                    
+                  <?php  foreach ($Users as $user): ?> 
+  <tr>
+    <td>
+      <div class="d-inline-block align-middle">
+        <img
+          src="../assets/images/user/avatar-1.jpg"
+          alt="user image"
+          class="img-radius align-top m-r-15"
+          style="width: 40px" />
+        <div class="d-inline-block">
+          <h6 class="m-b-0">
+            <?= $user->name ?>
+          </h6>
+          <p class="m-b-0 text-primary">Android developer</p>
+        </div>
+      </div>
+    </td>
+    <td>Support Lead</td>
+    <!-- Mostrar el email del usuario -->
+    <td><?= $user->email ?></td>
+    <td>
+      <!-- Botones de acción -->
+      <div class="btn-group">
+        <!-- Ver detalles -->
+        <a href="view-details.php?id=<?= $user->id ?>" class="btn btn-info">View Details</a>
+
+        <!-- Editar -->
+        <a href="edit-user.php?id=<?= $user->id ?>" class="btn btn-success">Edit</a>
+
+        <!-- Eliminar (formulario para evitar problemas de seguridad) -->
+        <form action="delete-user.php" method="POST" style="display:inline;">
+          <input type="hidden" name="user_id" value="<?= $user->id ?>">
+          <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user?')">Delete</button>
+        </form>
+      </div>
+    </td>
+  </tr>
+<?php endforeach ?>
+
+                   
                   </tbody>
                 </table>
               </div>
