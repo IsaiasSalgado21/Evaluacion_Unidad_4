@@ -28,11 +28,10 @@ if (isset($_POST['action'])) {
             break;
 
         case 'removeUser':
-
-            $userId = $_POST['userId'];
+            $userId = filter_input(INPUT_POST, 'userId', FILTER_SANITIZE_NUMBER_INT);
             $usercontroller = new UserController();
-            $userData = $usercontroller->removeUser($userId);
-
+            $usercontroller->removeUser($userId);
+            header('/Evaluacion_Unidad_4/user-list/');
 
             break;
 
@@ -153,7 +152,7 @@ class UserController
 
 
 
-    public function editUser($name, $lastname, $password, $email, $role, $phonenumber, $userId)
+    public function editUser($name, $lastname, $email, $role, $phonenumber, $userId)
     {
 
         $curl = curl_init();
@@ -180,13 +179,23 @@ class UserController
         echo $response;
     }
 
-    public function removeUser($userId)
-    {
+    public function removeUser($userId){
+
+
+        if (empty($userId) || !is_numeric($userId)) {
+            echo "Error: ID de usuario inválido.";
+            return;
+        }
+
+        if (empty($_SESSION['user_data']->token)) {
+            echo "Error: Token de sesión no válido.";
+            return;
+        }
 
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://crud.jonathansoto.mx/api/users/'.$userId,
+            CURLOPT_URL => 'https://crud.jonathansoto.mx/api/users/' . $userId,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
@@ -198,11 +207,12 @@ class UserController
                 'Authorization: Bearer ' . $_SESSION['user_data']->token,
             ),
         ));
-
         $response = curl_exec($curl);
 
+        if (curl_errno($curl)) {
+            echo "Error en cURL: " . curl_error($curl);
+        };
         curl_close($curl);
-        echo $response;
     }
 
 
@@ -230,6 +240,36 @@ class UserController
 
         curl_close($curl);
         echo $response;
+    }
+
+    private function executeCurlRequest($url, $method, $postData = null)
+    {
+        $curl = curl_init();
+
+        $options = [
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => $method,
+            CURLOPT_HTTPHEADER => [
+                'Authorization: Bearer ' . $_SESSION['user_data']->token
+            ]
+        ];
+
+        if ($postData) {
+            $options[CURLOPT_POSTFIELDS] = $postData;
+        }
+
+        curl_setopt_array($curl, $options);
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        return json_decode($response);
     }
 }
 

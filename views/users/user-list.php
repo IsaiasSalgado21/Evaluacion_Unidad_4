@@ -73,70 +73,43 @@ $Users = $UserController->get();
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-inline-block align-middle">
-                          <img
-                            src="../assets/images/user/avatar-1.jpg"
-                            alt="user image"
-                            class="img-radius align-top m-r-15"
-                            style="width: 40px" />
-                          <div class="d-inline-block">
-                            <h6 class="m-b-0">Quinn Flynn</h6>
-                            <p class="m-b-0 text-primary">Android developer</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>Support Lead</td>
-                      <td>quinn.flynn@example.com</td>
-                      <td>
-                        <!-- Action buttons -->
-                        <div class="btn-group">
-                          <button class="btn btn-info">View Details</button>
-                          <button class="btn btn-success">Edit</button>
-                          <button class="btn btn-danger">delete</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-inline-block align-middle">
-                          <img
-                            src="../assets/images/user/avatar-2.jpg"
-                            alt="user image"
-                            class="img-radius align-top m-r-15"
-                            style="width: 40px" />
-                          <div class="d-inline-block">
-                            <h6 class="m-b-0">Garrett Winters</h6>
-                            <p class="m-b-0 text-primary">Android developer</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>Accountant</td>
-                      <td>garrett.winters@example.com</td>
-                      <td>
-                        <div class="btn-group">
-                          <button class="btn btn-info">View Details</button>
-                          <button class="btn btn-success">Edit</button>
-                          <button class="btn btn-danger">delete</button>
-                        </div>
-                      </td>
-                    </tr>
+                    <?php if (isset($Users) && count($Users) > 0): ?>
+                      <?php foreach ($Users as $user): ?>
+                        <tr>
+                          <td>
+                            <div class="d-inline-block align-middle">
+                              <img 
+                                src="../assets/images/user/avatar-1.jpg" 
+                                alt="user image" 
+                                class="img-radius align-top m-r-15" 
+                                style="width: 40px" />
+                              <div class="d-inline-block">
+                                <h6 class="m-b-0"><?= htmlspecialchars($user->name) ?></h6>
+                                <p class="m-b-0 text-primary"><?= htmlspecialchars($user->role ?? 'N/A') ?></p>
+                              </div>
+                            </div>
+                          </td>
+                          <td><?= htmlspecialchars($user->position ?? 'Unknown') ?></td>
+                          <td><?= htmlspecialchars($user->email) ?></td>
+                          <td>
+                            <div class="btn-group">
+                              <button class="btn btn-info">View Details</button>
+                              <button class="btn btn-success">Edit</button>
+                              <button class="btn btn-danger" onclick="confirmDelete('<?= $user->id ?>')">Delete</button>
+                            </div>
+                          </td>
+                        </tr>
+                      <?php endforeach; ?>
+                    <?php else: ?>
+                      <tr>
+                        <td colspan="4" class="text-center">No users found</td>
+                      </tr>
+                    <?php endif; ?>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
-
-
-          <?php if (isset($Users) && count($Users)): ?>
-            <?php foreach ($Users as $user): ?>
-              <option value="<?= $user->id ?>">
-                <?= $user->name ?>
-              </option>
-            <?php endforeach ?>
-          <?php endif ?>
-
 
         </div>
         <!-- [ sample-page ] end -->
@@ -144,6 +117,11 @@ $Users = $UserController->get();
       <!-- [ Main Content ] end -->
     </div>
   </div>
+
+  <form id="deleteForm" method="POST" action="../../Evaluacion_Unidad_4/user-list/" style="display: none;">
+    <input type="hidden" name="action" value="removeUser">
+    <input type="hidden" name="userId" id="deleteUserId">
+  </form>
 
 
   <?php include "../layouts/footer.php" ?>
@@ -156,6 +134,15 @@ $Users = $UserController->get();
   <script src="<?= BASE_PATH ?> assets/js/pages/dashboard-default.js"></script>
 
   <?php include "../layouts/scripts.php" ?>
+
+  <script>
+    function confirmDelete(userId) {
+      if (confirm("Seguro que desea eliminar este usuario?")) {
+        document.getElementById('deleteUserId').value = userId;
+        document.getElementById('deleteForm').submit();
+      }
+    }
+  </script>
 
   <?php include "../layouts/modals.php" ?>
 </body>
