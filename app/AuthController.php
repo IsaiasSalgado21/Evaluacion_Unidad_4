@@ -14,9 +14,8 @@ if (isset($_POST['action'])) {
 
             case 'logout':
 
-                $email = $_POST['email'];
                 $authController = new AuthController();
-                $authController->logOut($email);
+                $authController->logOut();
 
                 break;
     }
@@ -64,30 +63,36 @@ class AuthController
 
 
 
-    public function logOut($email)
-    {
-
-
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://crud.jonathansoto.mx/api/logout',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array('email' => $email),
-            CURLOPT_HTTPHEADER => array(
-                'Authorization: Bearer '.$_SESSION['user_data']->token
-            ),
-        ));
-
-        $response = curl_exec($curl);
-
-        curl_close($curl);
-        echo $response;
+    public function logOut()
+{
+    if (!isset($_SESSION['user_data'])) {
+        header("Location: " . BASE_PATH . "login");
+        exit;
     }
+
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://crud.jonathansoto.mx/api/logout',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_HTTPHEADER => array(
+            'Authorization: Bearer ' . $_SESSION['user_data']->token
+        ),
+    ));
+
+    $response = curl_exec($curl);
+    curl_close($curl);
+
+    session_unset();
+    session_destroy();
+
+    header("Location: " . BASE_PATH . "login");
+    exit;
+}
 }

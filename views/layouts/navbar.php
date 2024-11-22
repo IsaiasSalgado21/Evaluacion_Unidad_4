@@ -22,12 +22,15 @@
     <div class="d-flex align-items-center">
       <ul class="list-unstyled">
         <li class="dropdown pc-h-item header-user-profile">
-        <a href="#" class="dropdown-item">
-          <span class="d-flex align-items-center">
-            <i class="ph-duotone ph-power"></i>
-            <span>Logout</span>
-          </span>
-        </a>
+          <form id="logoutForm" action="../app/AuthController.php" method="POST" style="display: none;">
+              <input type="hidden" name="action" value="logout">
+          </form>
+            <a href="#" class="dropdown-item" onclick="document.getElementById('logoutForm').submit();">
+                <span class="d-flex align-items-center">
+                    <i class="ph-duotone ph-power"></i>
+                    <span>Logout</span>
+                </span>
+            </a>
         </li>
       </ul>
     </div>
